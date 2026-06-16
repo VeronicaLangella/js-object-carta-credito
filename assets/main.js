@@ -16,6 +16,5 @@ const carta = {
     },
     getScadenza() {
         return new Date().getFullYear() - this.scadenza
-
     }
 };

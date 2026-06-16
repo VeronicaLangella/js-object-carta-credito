@@ -18,7 +18,7 @@ Modella i dati di una carta di credito.
 ``` js
 const carta = {
     numero: 456896234,
-    scadenza: "2027-03-05",
+    scadenza: 2027,
     cvc: 567,
     intestatario: {
         nome: "Anna",
@@ -29,6 +29,9 @@ const carta = {
         via: "Via del Corso",
         cap: "00187"
 
+    },
+    getScadenza() {
+        return new Date().getFullYear() - this.scadenza
     }
 };
 ```
